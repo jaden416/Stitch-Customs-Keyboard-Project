@@ -1,7 +1,6 @@
-var open = document.getElementById('hamburger-icon')
-var close = document.getElementById('close')
 
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function() {
+    // this function runs when the DOM is ready, i.e. when the document has been parsed
     var open = document.getElementById('hamburger-icon')
     var close = document.getElementById('close')
     open.addEventListener('click', openMenu)
@@ -24,5 +23,4 @@ window.onload = function(){
         document.body.style.overflow= "visible"
 
     }
-
-}
+});
