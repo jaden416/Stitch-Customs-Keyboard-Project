@@ -1,0 +1,65 @@
+@use '../util' as u;
+.lightbox{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    top: 0;
+    left: 0;
+    display: none;
+    transition: opacity 0.3 ease;
+    margin: 0;
+    
+}
+
+.lightbox[open]{
+    display: grid;
+    margin: auto;
+    animation:  fade-in 500ms forwards;
+    
+}
+
+.lightbox[close]{
+    pointer-events: none;
+    margin: auto;
+    animation:  fade-out 700ms forwards;
+    display: block;
+}
+  
+#displayedIMG {
+    
+    width:100%;
+    margin: auto; 
+    
+    
+
+    //DESKTOP MODE
+    @include u.breakpoint(large){
+        width: 70%;
+     }
+ }
+
+
+
+ @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+  

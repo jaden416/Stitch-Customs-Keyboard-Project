@@ -1,0 +1,25 @@
+//700px, 900px, 1440px divide these by 16 to convert it to em units
+$breakpoints-up:(
+    "medium": 43.75em,
+    "large": 56.25em,
+    "xlarge": 90em,
+);
+
+//699.98px, 899.98, 1439.98px 
+$breakpoints-down:(
+    "small": 44.7485em,
+    "medium": 56.24875em,
+    "large": 89.99875em,
+);
+
+@mixin breakpoint($size){
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size){
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}

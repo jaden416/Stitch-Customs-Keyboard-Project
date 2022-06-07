@@ -1,0 +1,57 @@
+@use '../util' as u;
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+//inherits its box-sizing from its parent element
+*, *::before,
+ *::after {
+box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:   var(--background-color);
+    color: var(--text-color);
+}
+
+nav ul li {
+    list-style: none;
+    
+}
+
+nav ul li a {
+    margin: 10px auto 10px auto;
+    text-decoration: none;
+}
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+
+
+#close {
+    float: right;
+    margin-right: 10px;
+}
+
+
+
+.keyboard-hero{
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-inline: auto auto;
+}
+
+.desktop-nav ul li:nth-child(1){
+    margin-left: 0;
+}
+.desktop-nav ul li:nth-child(3){
+    margin-right: 0;
+}
