@@ -1,4 +1,4 @@
-//window.onload = function() {
+window.onload = function() {
 
     var keyboardSelect = document.querySelectorAll('.keyboard img');
     var keyboardArray = Array.from(keyboardSelect)
@@ -63,4 +63,4 @@
         )}
     }
 
-//}
+}
